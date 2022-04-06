@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: go-package
+    container_name: go-package
+    build: .
+    restart: on-failure
+    environment:
+      DB_USER=devuser
+      DB_PWD=devpwd
+      DB_HOST=localhost
+      DB_PORT=5432
+      DB_NAME=db-test
